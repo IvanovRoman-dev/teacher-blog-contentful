@@ -111,6 +111,20 @@ button{
    }
 }
 
+.social{
+   display: flex;
+   @media only screen and (min-width: 400px){
+      flex-direction: row;
+   }
+   &__link{
+      margin-right: 10px;
+      margin-bottom: 0;
+      &:last-child{
+         margin-right: 0;
+      }
+   }
+}
+
 .footer{
    background-color: $green-100;
    padding: 30px 0 30px 0;

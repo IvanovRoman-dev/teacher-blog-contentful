@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import { useRouter } from "next/router";
 import { Container, Button } from "react-bootstrap";
 import moment from "moment";
+import { BLOCKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import ArrowIcon from "../../components/ArrowIcon";
 import DateIcon from "../../components/DateIcon";
@@ -41,6 +42,23 @@ export async function getStaticProps({ params }) {
 const signlePostPage = ({ post }) => {
    const router = useRouter();
 
+   const PostImages = {
+      renderNode: {
+         [BLOCKS.EMBEDDED_ASSET]: (node) => {
+            const ImageURL = node.data.target.fields.file.url;
+            const ImageALT = node.data.target.fields.file.fileName;
+            return (
+               <div className="text-center">
+                  <img
+                     src={ImageURL}
+                     alt={ImageALT}
+                     className="img-fluid post__image"
+                  />
+               </div>
+            );
+         },
+      },
+   };
    return (
       <article className="post">
          <Container>
@@ -53,7 +71,9 @@ const signlePostPage = ({ post }) => {
                <DateIcon />
                {moment(post[0].fields.publeshedDate).format("DD.MM.YYYY")}
             </p>
-            <div>{documentToReactComponents(post[0].fields.content)}</div>
+            <div>
+               {documentToReactComponents(post[0].fields.content, PostImages)}
+            </div>
          </Container>
       </article>
    );

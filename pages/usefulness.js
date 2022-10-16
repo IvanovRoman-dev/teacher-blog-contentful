@@ -45,26 +45,30 @@ const usefulness = ({ posts, page }) => {
             <Row className="mb-5">
                {posts.items.map((post) => (
                   <Col md={4} key={post.sys.id}>
-                     <Card
-                        style={{
-                           width: "100%",
-                           border: "none",
-                        }}
-                     >
-                        <Card.Img
-                           variant="top"
-                           src={`http://${post.fields.image.fields.file.url}`}
-                        />
-                        <Card.Body>
-                           <Card.Title as="h4">{post.fields.title}</Card.Title>
-                           <Link href={`/post/${post.sys.id}`}>
+                     <Link href={`/post/${post.sys.id}`}>
+                        <Card
+                           style={{
+                              width: "100%",
+                              border: "none",
+                           }}
+                           className="cursor-pointer"
+                        >
+                           <Card.Img
+                              variant="top"
+                              src={`http://${post.fields.image.fields.file.url}`}
+                           />
+                           <Card.Body>
+                              <Card.Title as="h4">
+                                 {post.fields.title}
+                              </Card.Title>
+
                               <Button className="pink-button card-button">
                                  <span>Читать</span>
                                  <ArrowIcon />
                               </Button>
-                           </Link>
-                        </Card.Body>
-                     </Card>
+                           </Card.Body>
+                        </Card>
+                     </Link>
                   </Col>
                ))}
             </Row>

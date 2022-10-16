@@ -1,5 +1,7 @@
 import Head from "next/head";
 import { Container } from "react-bootstrap";
+import TelegramIcon from "../components/TelegramIcon";
+import VkIcon from "../components/VkIcon";
 const contacts = () => {
    return (
       <section className="contacts-section">
@@ -26,7 +28,14 @@ const contacts = () => {
                </a>
             </div>
             <h4 className="text-center">Социальные сети</h4>
-            <div></div>
+            <div className="social">
+               <a className="social__link">
+                  <VkIcon />
+               </a>
+               <a className="social__link">
+                  <TelegramIcon />
+               </a>
+            </div>
          </Container>
       </section>
    );

@@ -1,3 +1,10 @@
+.contacts-section{
+    .social{
+        justify-content: center;
+    } 
+}
+
+
 .contacts-section__mail-link{
     color: $black-2;
     text-decoration: underline !important;
@@ -6,5 +13,6 @@
     }
     &:last-child{
         margin-bottom: 60px;
-    } 
+    }
 }
+

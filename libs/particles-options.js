@@ -54,7 +54,7 @@ const PARTICLES_OPTIONS = {
       },
       move: {
          enable: true,
-         speed: 1.5,
+         speed: 0.3,
          direction: "none",
          random: true,
          straight: false,
@@ -75,7 +75,7 @@ const PARTICLES_OPTIONS = {
             mode: "repulse",
          },
          onclick: {
-            enable: true,
+            enable: false,
             mode: "push",
          },
          resize: true,

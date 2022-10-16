@@ -14,4 +14,23 @@
     h3{
         color: $green-300;
     }
+    a{
+        color: $dark-blue;
+        text-decoration: underline;
+        transition: opacity .5s ease-in-out;
+        &:hover{
+            color: $dark-blue;
+            opacity: 0.5;
+        }
+    }
+    b{
+        color: $green-300;
+    }
+    &__image{
+        width: 100%;
+        margin-bottom: 10px;
+        @media only screen and (min-width: 768px){
+            width: 75%;
+        }
+    }   
 }
