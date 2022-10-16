@@ -40,7 +40,7 @@ export async function getStaticProps({ params }) {
    };
 }
 
-const signlePostPage = ({ post }) => {
+const SignlePostPage = ({ post }) => {
    const router = useRouter();
 
    const PostImages = {
@@ -82,4 +82,4 @@ const signlePostPage = ({ post }) => {
    );
 };
 
-export default signlePostPage;
+export default SignlePostPage;

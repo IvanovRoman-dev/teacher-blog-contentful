@@ -2,6 +2,7 @@ import Head from "next/head";
 import { createClient } from "contentful";
 import Link from "next/link";
 import useRouter from "next/router";
+import Image from "next/future/image";
 import { Container, Button } from "react-bootstrap";
 import ArrowIcon from "../components/ArrowIcon";
 import moment from "moment";
@@ -50,12 +51,13 @@ const distanceEducation = ({ posts, page }) => {
                      <Link href={`/post/${post.sys.id}`}>
                         <div className="distance-education__post-link">
                            <div className="distance-education__post-col--1">
-                              <img
-                                 src={`http://${post.fields.image.fields.file.url}`}
+                              <Image
+                                 src={`http:${post.fields.image.fields.file.url}`}
                                  className="distance-education__post-image"
-                                 width="180"
-                                 height="120"
-                                 alt={post.fields.image.fields.file.title}
+                                 width="1920"
+                                 height="1080"
+                                 alt="post-image"
+                                 // alt={post.fields.image.fields.file.title}
                               />
                               <div className="distance-education__post-info">
                                  <h3 className="distance-education__post-title">
