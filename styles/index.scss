@@ -1,0 +1,134 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./colors.scss";
+@import "./typography.scss";
+
+body{
+   background-color: $green-100;
+   color: $black-2;
+   height: 100%;
+}
+
+.layout{
+   position: relative;
+   z-index: 1;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.main{
+   flex: 1 1 auto;
+}
+
+.container {
+   max-width: 86%;
+}
+
+
+.wave-link{
+   position: relative;
+   white-space: nowrap;
+   letter-spacing: 1px;
+   color: $black-2;
+   &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      top: 100%;
+      left: 0;
+      pointer-events: none;
+   }
+   &:hover{
+      .link__graphic--slide {
+         transform: translate3d(-66.6%, 0, 0);
+      }
+   }
+}
+
+.link--iocaste {
+   overflow: hidden;
+   padding: 7px 0;
+}
+
+.link__graphic {
+   position: absolute;
+   top: 0;
+   left: 0;
+   pointer-events: none;
+   fill: none;
+   stroke: #000;
+   stroke-width: 1px;
+ }
+
+ .link__graphic--slide {
+   top: -3px;
+   stroke-width: 2px;
+   transition: transform 0.7s;
+     transition-timing-function: ease;
+   transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+ }
+.arrow{
+   vertical-align: sub;
+}
+
+.pink-button{
+   background-color: $pink;
+   color: $black-2;
+   border: none;
+   transition: opacity .3s ease-in-out;
+   &:hover{
+      background-color: $pink !important;
+      color: $black-2 !important;
+      opacity: .85;
+   }
+   &:disabled{
+      color: $black-2;
+      background-color: $pink;
+   }
+}
+
+.text-underline{
+  text-decoration: underline;
+}
+
+.cursor-pointer{
+   cursor: pointer;
+}
+
+.main-title-margin{
+   margin-top: 30px !important;
+   margin-bottom: 90px !important;
+}
+
+
+
+button{
+   &:focus{
+      outline-color: $pink !important;
+   }
+}
+
+.footer{
+   background-color: $green-100;
+   padding: 30px 0 30px 0;
+   color: $green-300;
+   border-top: 2px solid $black-2;
+   p{
+      margin-bottom: 0;
+      span{
+         color: $dark-blue;
+      }
+   }
+}
+
+
+@import "../components/Header.scss";
+@import "./home.scss";
+@import "./single-post.scss";
+@import "./distance-education.scss";
+@import "./usefulness.scss";
+@import "./contacts.scss";
+@import "./404.scss"

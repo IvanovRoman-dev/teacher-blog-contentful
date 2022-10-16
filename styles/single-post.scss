@@ -1,0 +1,17 @@
+.post{
+    .pink-button{
+        margin-bottom: 16px;
+        .arrow{
+           margin-right: 10px;
+           transform: rotate(-135deg);     
+        }
+    }
+    .post-date{
+        .date-icon{
+            margin-right: 10px;
+        }
+    }
+    h3{
+        color: $green-300;
+    }
+}

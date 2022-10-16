@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Bold.ttf");
+    src: url("../fonts/Raleway-Bold.woff") format("woff");
+    src: url("../fonts/Raleway-Bold.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+}
+ 
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/Raleway-Medium.ttf");
+    src: url("../fonts/Raleway-Medium.woff") format("woff");
+    src: url("../fonts/Raleway-Medium.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+  
+body{
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-display: swap;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+     color: currentColor;  
+    }
+ }
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 24px;
+    letter-spacing: 1px;
+    @media only screen and (min-width: 576px){
+        font-size: 34px; 
+    }
+    @media only screen and (min-width: 768px){
+        font-size: 38px; 
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: 44px; 
+    }
+    @media only screen and (min-width: 1200px){
+        font-size: 52px;
+    }
+}
+
+h2{
+    font-size: 45px;
+    @media only screen and (min-width: 1200px) {
+        font-size: 37px;  
+    }
+}
+
+h3{
+    font-size: 32px;
+    @media only screen and (min-width: 576px) {
+        font-size: 36px;  
+    }
+}
+
+.text-green-100{
+    color: $green-100;
+}
+.text-green-200{
+    color: $green-200;
+}
+.text-green-300{
+    color: $green-300;
+}
+.text-black-2{
+    color: $black-2;
+}
+.text-pink{
+    color: $pink;
+}
+.text-dark-blue{
+    color: $dark-blue;
+}
+.text-orange{
+    color: $orange;
+}

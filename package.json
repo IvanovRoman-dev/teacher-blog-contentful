@@ -1,0 +1,32 @@
+{
+  "name": "next-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.12.1",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.1",
+    "contentful": "^9.2.5",
+    "framer-motion": "^7.5.3",
+    "moment": "^2.29.4",
+    "next": "12.3.1",
+    "next-mdx-remote": "^4.1.0",
+    "qs": "^6.11.0",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-particles": "^2.3.3",
+    "tsparticles": "^2.3.4"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "sass": "^1.55.0"
+  }
+}

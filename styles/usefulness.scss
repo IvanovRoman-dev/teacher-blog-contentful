@@ -1,0 +1,13 @@
+.usefulness-section{
+    .card{
+        box-shadow: 2px 2px 20px -8px rgba(34, 60, 80, 0.2);;
+    }
+    .card-title{
+        margin-bottom: 53px;
+    }
+    .card-button{
+        &>.arrow{
+            margin-left: 10px;
+        }
+    }
+}
