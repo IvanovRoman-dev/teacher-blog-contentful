@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import { useRouter } from "next/router";
+import Image from "next/future/image";
 import { Container, Button } from "react-bootstrap";
 import moment from "moment";
 import { BLOCKS } from "@contentful/rich-text-types";
@@ -49,8 +50,10 @@ const signlePostPage = ({ post }) => {
             const ImageALT = node.data.target.fields.file.fileName;
             return (
                <div className="text-center">
-                  <img
-                     src={ImageURL}
+                  <Image
+                     width={1920}
+                     height={1080}
+                     src={`http:${ImageURL}`}
                      alt={ImageALT}
                      className="img-fluid post__image"
                   />
