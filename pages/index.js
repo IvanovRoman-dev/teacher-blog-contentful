@@ -66,7 +66,7 @@ export default function Home() {
                      , а также{" "}
                      <Link href="/usefulness">
                         <span className="text-green-300 cursor-pointer">
-                           полезную информацию для родилей
+                           полезную информацию для родителей
                         </span>
                      </Link>{" "}
                      в разделе Полезности и{" "}
