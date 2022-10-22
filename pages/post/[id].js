@@ -64,7 +64,7 @@ const SignlePostPage = ({ post }) => {
             const LinkURI = node.data.uri;
             const LinkTitle = node.content[0].value;
             return (
-               <a href={LinkURI} target="_blank">
+               <a href={LinkURI} target="_blank" rel="noreferrer">
                   {LinkTitle}
                </a>
             );
