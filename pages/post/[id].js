@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/future/image";
 import { Container, Button } from "react-bootstrap";
 import moment from "moment";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import ArrowIcon from "../../components/ArrowIcon";
 import DateIcon from "../../components/DateIcon";
@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
 const SignlePostPage = ({ post }) => {
    const router = useRouter();
 
-   const PostImages = {
+   const CustomRender = {
       renderNode: {
          [BLOCKS.EMBEDDED_ASSET]: (node) => {
             const ImageURL = node.data.target.fields.file.url;
@@ -58,6 +58,15 @@ const SignlePostPage = ({ post }) => {
                      className="img-fluid post__image"
                   />
                </div>
+            );
+         },
+         [INLINES.HYPERLINK]: (node) => {
+            const LinkURI = node.data.uri;
+            const LinkTitle = node.content[0].value;
+            return (
+               <a href={LinkURI} target="_blank">
+                  {LinkTitle}
+               </a>
             );
          },
       },
@@ -75,7 +84,7 @@ const SignlePostPage = ({ post }) => {
                {moment(post[0].fields.publeshedDate).format("DD.MM.YYYY")}
             </p>
             <div>
-               {documentToReactComponents(post[0].fields.content, PostImages)}
+               {documentToReactComponents(post[0].fields.content, CustomRender)}
             </div>
          </Container>
       </article>
