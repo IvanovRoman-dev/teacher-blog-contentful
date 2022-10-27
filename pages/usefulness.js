@@ -30,7 +30,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
    };
 }
 
-const usefulness = ({ posts, page }) => {
+const Usefulness = ({ posts, page }) => {
    const router = useRouter;
    const lastPage = Math.ceil(posts.total / PAGE_LIMIT);
    return (
@@ -99,4 +99,4 @@ const usefulness = ({ posts, page }) => {
    );
 };
 
-export default usefulness;
+export default Usefulness;

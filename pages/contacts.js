@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Container } from "react-bootstrap";
 import TelegramIcon from "../components/TelegramIcon";
 import VkIcon from "../components/VkIcon";
-const contacts = () => {
+const Contacts = () => {
    return (
       <section className="contacts-section">
          <Head>
@@ -41,4 +41,4 @@ const contacts = () => {
    );
 };
 
-export default contacts;
+export default Contacts;

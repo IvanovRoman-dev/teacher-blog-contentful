@@ -32,7 +32,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
    };
 }
 
-const distanceEducation = ({ posts, page }) => {
+const DistanceEducation = ({ posts, page }) => {
    const router = useRouter;
    const lastPage = Math.ceil(posts.total / PAGE_LIMIT);
    return (
@@ -119,4 +119,4 @@ const distanceEducation = ({ posts, page }) => {
    );
 };
 
-export default distanceEducation;
+export default DistanceEducation;
