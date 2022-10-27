@@ -2,11 +2,13 @@ import "../styles/index.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }) {
    const router = useRouter();
    return (
       <AnimatePresence mode="wait">
+         <Analytics />
          <motion.div
             key={router.route}
             initial="initialState"
